@@ -26,7 +26,11 @@ app.post("/api/products", async (req, res) =>{
   }
 });
 
-
+app.delete("api/products/id", async (req, res)=>{
+    const {id} = req.body;  //what ever u write their instead og id /hello {helo}
+    console.log("id", id);
+    
+})
 
 app.listen(5000, ()=> {
     connectdb();
